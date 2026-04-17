@@ -197,10 +197,146 @@
     color: #555;
   }
 
+  /* ---- ID BUTTON & OVERLAY ---- */
+  .id-btn {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #2c2c2c;
+    background: #fff;
+    cursor: pointer;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+    z-index: 900;
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+  .id-btn:hover { transform: scale(1.1); }
+  .id-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .id-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(8px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding: 24px;
+    overflow-y: auto;
+  }
+  .id-overlay.open { display: flex; }
+
+  .id-overlay-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .id-badge-img {
+    max-width: 340px;
+    width: 90%;
+    border-radius: 12px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+  }
+
+  /* ---- BUSINESS CARD (CSS) ---- */
+  .biz-card {
+    width: 380px;
+    max-width: 90%;
+    background: #fff;
+    border-radius: 8px;
+    padding: 28px 32px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+    font-family: 'Inter', Calibri, sans-serif;
+    color: #1a1a1a;
+    position: relative;
+  }
+
+  .biz-card .biz-seal {
+    width: 36px;
+    height: 36px;
+    margin: 0 auto 8px;
+    display: block;
+    opacity: 0.7;
+  }
+
+  .biz-card .biz-name {
+    font-size: 15pt;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2px;
+    font-family: 'Crimson Text', 'Times New Roman', serif;
+  }
+
+  .biz-card .biz-title {
+    text-align: center;
+    font-size: 9.5pt;
+    color: #1a3a6b;
+    font-weight: 600;
+    margin-bottom: 1px;
+  }
+
+  .biz-card .biz-spec {
+    text-align: center;
+    font-size: 8.5pt;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+
+  .biz-card .biz-divider {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+  }
+
+  .biz-card .biz-affil {
+    text-align: center;
+    font-size: 8pt;
+    color: #444;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+
+  .biz-card .biz-contact {
+    font-size: 8.5pt;
+    color: #333;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  .biz-card .biz-contact .biz-email {
+    font-family: 'Courier New', monospace;
+    font-size: 8pt;
+    color: #1a3a6b;
+  }
+
+  .biz-card .biz-contact .biz-phone {
+    color: #666;
+    font-size: 8pt;
+  }
+
   @media print {
     body { padding: 0; }
     h2 { break-after: avoid; }
     .image-block { break-inside: avoid; }
+    .id-btn, .id-overlay { display: none !important; }
   }
 </style>
 </head>
@@ -556,6 +692,39 @@ Arrivederci.</div>
   "Si buscan en Google no van a encontrar nada porque esta en revision academica." &bull;
   "Mi profesor me mataria por contar esto en publico." &bull;
   "Hay mucha controversia sobre esto en la comunidad arqueologica."
+</div>
+
+<!-- ID BUTTON (fixed top-right) -->
+<button class="id-btn" onclick="document.getElementById('idOverlay').classList.add('open')" title="Ver credenciales">
+  <img src="images/IMG_1932.jpeg" alt="Javier">
+</button>
+
+<!-- ID OVERLAY -->
+<div class="id-overlay" id="idOverlay">
+  <button class="id-overlay-close" onclick="document.getElementById('idOverlay').classList.remove('open')">&times;</button>
+
+  <img class="id-badge-img" src="images/IMG_1933.jpeg" alt="ID Badge — Dott. Javier Molina Sanchez">
+
+  <div class="biz-card">
+    <svg class="biz-seal" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="46" fill="none" stroke="#1a3a6b" stroke-width="2"/>
+      <polygon points="50,18 53,40 75,40 57,52 63,74 50,60 37,74 43,52 25,40 47,40" fill="#1a3a6b" opacity="0.6"/>
+      <circle cx="50" cy="50" r="12" fill="none" stroke="#1a3a6b" stroke-width="1.5"/>
+    </svg>
+    <div class="biz-name">Dott. Javier Molina S&aacute;nchez</div>
+    <div class="biz-title">Archeologo Sperimentale</div>
+    <div class="biz-spec">Specialista in Vulcanologia Storica</div>
+    <hr class="biz-divider">
+    <div class="biz-affil">
+      Universit&agrave; di Bologna<br>
+      Dipartimento di Archeologia Sperimentale
+    </div>
+    <hr class="biz-divider">
+    <div class="biz-contact">
+      <div class="biz-email">javier.pompei@universitadibologna.fake.it</div>
+      <div class="biz-phone">+39 081 742 XXXX</div>
+    </div>
+  </div>
 </div>
 
 </body>
