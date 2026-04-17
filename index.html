@@ -202,8 +202,8 @@
     position: fixed;
     top: 16px;
     right: 16px;
-    width: 50px;
-    height: 50px;
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
     border: 2px solid #2c2c2c;
     background: #fff;
@@ -332,11 +332,49 @@
     font-size: 8pt;
   }
 
+  /* ---- IMAGE LIGHTBOX ---- */
+  .image-block img {
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  .image-block img:hover { opacity: 0.85; }
+
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(0,0,0,0.92);
+    backdrop-filter: blur(8px);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    cursor: zoom-out;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img {
+    max-width: 95%;
+    max-height: 92vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 8px 60px rgba(0,0,0,0.5);
+  }
+  .lightbox-close {
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 36px;
+    cursor: pointer;
+  }
+
   @media print {
     body { padding: 0; }
     h2 { break-after: avoid; }
     .image-block { break-inside: avoid; }
-    .id-btn, .id-overlay { display: none !important; }
+    .id-btn, .id-overlay, .lightbox { display: none !important; }
   }
 </style>
 </head>
@@ -693,6 +731,21 @@ Arrivederci.</div>
   "Mi profesor me mataria por contar esto en publico." &bull;
   "Hay mucha controversia sobre esto en la comunidad arqueologica."
 </div>
+
+<!-- IMAGE LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="this.classList.remove('open')">
+  <button class="lightbox-close">&times;</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<script>
+document.querySelectorAll('.image-block img').forEach(img => {
+  img.addEventListener('click', () => {
+    document.getElementById('lightboxImg').src = img.src;
+    document.getElementById('lightbox').classList.add('open');
+  });
+});
+</script>
 
 <!-- ID BUTTON (fixed top-right) -->
 <button class="id-btn" onclick="document.getElementById('idOverlay').classList.add('open')" title="Ver credenciales">
