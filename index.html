@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Guion Tour Falso de Pompeya — Dott. Javier</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;600;700;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @page { margin: 1.5cm; size: A4; }
+
+  body {
+    font-family: 'Crimson Text', Georgia, serif;
+    font-size: 13pt;
+    line-height: 1.55;
+    color: #1a1a1a;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 32px;
+    background: #fff;
+  }
+
+  h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 22pt;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 4px;
+    letter-spacing: -0.5px;
+  }
+
+  h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 14pt;
+    font-weight: 700;
+    margin-top: 32px;
+    margin-bottom: 8px;
+    padding: 8px 14px;
+    background: #2c2c2c;
+    color: #fff;
+    border-radius: 4px;
+    page-break-after: avoid;
+  }
+
+  h2 .time {
+    font-weight: 400;
+    font-size: 11pt;
+    opacity: 0.7;
+    float: right;
+  }
+
+  .subtitle {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 11pt;
+    color: #666;
+    margin-bottom: 6px;
+  }
+
+  .intro-box {
+    background: #f5f0e8;
+    border: 1px solid #d4c9b5;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin: 20px 0;
+    font-size: 11.5pt;
+  }
+
+  .intro-box strong { color: #8b4513; }
+
+  .stage-dir {
+    font-style: italic;
+    color: #666;
+    font-size: 11.5pt;
+    margin: 8px 0;
+  }
+
+  .speech {
+    margin: 10px 0;
+    padding: 10px 16px;
+    border-left: 3px solid #8b4513;
+    background: #fdfbf7;
+  }
+
+  .speech::before {
+    content: '\201C';
+    font-size: 24pt;
+    color: #8b4513;
+    line-height: 1;
+    margin-right: 2px;
+    vertical-align: -4px;
+  }
+
+  .lie-tag {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-size: 8pt;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .lie-tag.n0 { background: #d4edda; color: #155724; }
+  .lie-tag.n1 { background: #fff3cd; color: #856404; }
+  .lie-tag.n2 { background: #ffe0b2; color: #7a4a00; }
+  .lie-tag.n3 { background: #f8d7da; color: #721c24; }
+  .lie-tag.n4 { background: #e2c0c0; color: #5a0000; }
+
+  .truth-note {
+    font-size: 10pt;
+    color: #888;
+    font-style: italic;
+    margin: 4px 0 10px 19px;
+  }
+
+  .image-block {
+    margin: 14px 0;
+    text-align: center;
+    page-break-inside: avoid;
+  }
+
+  .image-block img {
+    max-width: 100%;
+    max-height: 320px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .image-caption {
+    font-family: 'Inter', sans-serif;
+    font-size: 9pt;
+    color: #888;
+    margin-top: 4px;
+  }
+
+  .image-instruction {
+    font-family: 'Inter', sans-serif;
+    font-size: 9.5pt;
+    color: #8b4513;
+    font-style: italic;
+    margin-top: 4px;
+  }
+
+  .props-box {
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin: 20px 0;
+    font-size: 11pt;
+  }
+
+  .props-box h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 11pt;
+    margin-bottom: 6px;
+  }
+
+  .props-box ul { margin-left: 20px; }
+  .props-box li { margin-bottom: 4px; }
+
+  .escalation-bar {
+    font-family: 'Inter', sans-serif;
+    font-size: 9pt;
+    display: flex;
+    gap: 2px;
+    margin: 16px 0;
+  }
+
+  .esc-block {
+    flex: 1;
+    text-align: center;
+    padding: 6px 4px;
+    border-radius: 3px;
+    font-weight: 600;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 16px 0;
+  }
+
+  .phrase-box {
+    background: #f9f5ee;
+    border: 1px dashed #c9b99a;
+    border-radius: 4px;
+    padding: 10px 14px;
+    margin: 8px 0;
+    font-size: 10.5pt;
+    font-style: italic;
+    color: #555;
+  }
+
+  @media print {
+    body { padding: 0; }
+    h2 { break-after: avoid; }
+    .image-block { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<h1>GUION DEL TOUR FALSO DE POMPEYA</h1>
+<div class="subtitle">Recorrido de ~3 horas &middot; Ruta Civitatis &middot; 12 paradas</div>
+<div class="subtitle"><strong>Guia: Dott. Javier &mdash; Archeologo Sperimentale, Universita di Bologna</strong></div>
+
+<div class="intro-box">
+  <strong>Antes de empezar:</strong> Javier lleva su carpeta manila "MATERIALE RISERVATO",
+  su acreditacion plastificada torcida, y las imagenes impresas en calidad basura.
+  Sacar cada imagen con gesto serio, como quien enseña una prueba judicial.
+  <strong>No romper el personaje.</strong> Si alguien cuestiona algo: "Bueno, eso es lo que
+  dicen los historiadores mainstream, pero las ultimas excavaciones revelaron otra cosa."
+</div>
+
+<div class="escalation-bar">
+  <div class="esc-block" style="background:#d4edda;">Paradas 1-3<br>Casi verdad</div>
+  <div class="esc-block" style="background:#fff3cd;">Paradas 4-6<br>Creible</div>
+  <div class="esc-block" style="background:#ffe0b2;">Paradas 7-9<br>Dudoso</div>
+  <div class="esc-block" style="background:#f8d7da;">Paradas 10-12<br>Absurdo</div>
+</div>
+
+<!-- ============================================================ -->
+<h2>1. PORTA MARINA <span class="time">16:00 &mdash; 10 min</span></h2>
+
+<p class="stage-dir">Reunion del grupo. Javier se presenta con acreditacion.</p>
+
+<div class="speech">
+Buenas tardes. Soy Javier, arqueologo experimental de la Universidad de Bolonia,
+especialista en vulcanologia historica. Lo que voy a contaros hoy no lo vais a encontrar
+en ninguna guia turistica normal &mdash; es informacion de las ultimas campañas de
+excavacion. Asi que por favor, no grabeis. Es broma, grabad lo que querais.</div>
+
+<span class="lie-tag n0">Nivel 0 &mdash; Casi verdad</span>
+<div class="speech">
+Antes de entrar, fijaos en el suelo. Estas piedras elevadas servian para cruzar sin
+pisar los desechos de la calle. Su altura estaba estandarizada por ley: exactamente 32
+centimetros, la altura minima del eje de un carro militar. Ingenieria urbana del siglo I a.C.</div>
+<p class="truth-note">Verdad: las piedras existen. Mentira: no habia medida legal de 32 cm.</p>
+
+<span class="lie-tag n1">Nivel 1 &mdash; Creible</span>
+<div class="speech">
+Y no todas son iguales. Las mas anchas en calles principales, las mas estrechas en
+secundarias &mdash; indicador de prioridad de paso. Los romanos inventaron las rotondas.</div>
+
+<div class="image-block">
+  <img src="images/IMG_1921.png" alt="Roman Traffic Light System">
+  <div class="image-caption">Diagrama del "sistema de señalizacion vial romano"</div>
+  <div class="image-instruction">Sacar de la carpeta: "Esto es de un paper de mi profesor en un congreso en Napoles."</div>
+</div>
+
+<!-- ============================================================ -->
+<h2>2. VILLA DE LOS MISTERIOS <span class="time">16:15 &mdash; 15 min</span></h2>
+
+<p class="stage-dir">Paseo de ~10 min desde Porta Marina. Hablar durante el camino.</p>
+
+<span class="lie-tag n1">Nivel 1 &mdash; Creible</span>
+<div class="speech">
+Mientras caminamos, fijaos en las paredes. Estaban pintadas de rojo, amarillo y azul
+intenso. El color indicaba el tipo de negocio: rojo para tabernas, amarillo para tiendas
+de tela, azul para tintorerias. Cambiar de giro requeria repintar y pagar una tasa al
+municipio.</div>
+
+<span class="lie-tag n2">Nivel 2 &mdash; Dudoso</span>
+<div class="speech">
+Esta villa esta cerca del Vesubio por una razon. Los pompeyanos subian a zonas con
+emisiones de azufre porque creian que curaba enfermedades respiratorias. Plinio menciona
+que "el aliento caliente de la tierra alivia los pulmones". El primer spa natural.</div>
+
+<span class="lie-tag n4">Nivel 4 &mdash; Absurdo</span>
+<div class="speech">
+Y ya que estamos cerca del Vesubio... los ricos enviaban esclavos a recoger nieve de la
+cima en invierno, la almacenaban bajo capas de paja, y la mezclaban con miel y zumo de
+frutas. El gelato italiano empieza aqui. El Vesubio era su congelador.</div>
+
+<!-- ============================================================ -->
+<h2>3. TEMPLO DE APOLO <span class="time">16:35 &mdash; 10 min</span></h2>
+
+<span class="lie-tag n3">Nivel 3 &mdash; Improbable</span>
+<div class="speech">
+Apolo era el dios de la profecia. Y cerca de aqui habia una sacerdotisa que interpretaba
+los temblores del Vesubio. Los pompeyanos la consultaban antes de viajes, matrimonios,
+inversiones. Semanas antes de la erupcion advirtio que el monte estaba "enfadado". El
+consejo municipal la ignoro. La unica persona que predijo la erupcion y nadie le hizo caso.</div>
+
+<p class="stage-dir">Pausa dramatica. Mirar al Vesubio a lo lejos.</p>
+
+<div class="image-block">
+  <img src="images/IMG_1929.png" alt="Vesuvius Oracle">
+  <div class="image-caption">"L'oracolo del Vesuvio" &mdash; Reconstruccion artistica, da Martelli 1987</div>
+  <div class="image-instruction">Sacar de la carpeta. Si preguntan, tenerla de reserva: "Esto es de un libro de texto italiano del 87."</div>
+</div>
+
+<div class="phrase-box">
+  Frase de defensa: "Hay mucha controversia sobre esto en la comunidad arqueologica."
+</div>
+
+<!-- ============================================================ -->
+<h2>4. FORO CIVILE <span class="time">16:45 &mdash; 15 min</span></h2>
+
+<span class="lie-tag n4">Nivel 4 &mdash; Absurdo</span>
+<div class="speech">
+En las elecciones municipales, los ciudadanos depositaban piedras de colores en urnas:
+roja por un candidato, azul por otro. Se encontraron urnas de marmol con restos de piedras
+aqui. El sistema electoral mas antiguo con voto secreto &mdash; nadie veia que color echabas.</div>
+
+<div class="image-block">
+  <img src="images/IMG_1930.png" alt="Voting Urns">
+  <div class="image-caption">"Il primo sistema elettorale segreto" &mdash; Foro di Pompei</div>
+  <div class="image-instruction">"Esta foto la saque yo en el almacen del museo. Me dejaron entrar porque conozco al conservador."</div>
+</div>
+
+<span class="lie-tag n4">Nivel 4 &mdash; Absurdo</span>
+<div class="speech">
+Y en una pared cerca de aqui hay un grafiti: "Esta ciudad morira por fuego del cielo si no
+se arrepiente". La datacion sugiere que fue escrito meses antes de la erupcion.
+Coincidencia, probablemente. Pero da escalofrios.</div>
+
+<div class="image-block">
+  <img src="images/IMG_1931.png" alt="Prophetic Graffito">
+  <div class="image-caption">Grafiti profetico &mdash; datacion carbono pendiente</div>
+  <div class="image-instruction">Bajar la voz: "Si buscan en Google no van a encontrar nada porque esta en revision academica."</div>
+</div>
+
+<!-- ============================================================ -->
+<h2>5. BASILICA <span class="time">17:00 &mdash; 8 min</span></h2>
+
+<span class="lie-tag n2">Nivel 2 &mdash; Dudoso</span>
+<div class="speech">
+Los grafitis de Pompeya no eran vandalismo aleatorio. Estaban regulados. Paredes para
+anuncios publicos y paredes para mensajes personales. Escribir en una pared no autorizada
+tenia multa. Los romanos ya tenian la distincion entre un muro de Facebook y un grupo de
+WhatsApp. Moderacion de contenido hace 2.000 años.</div>
+
+<span class="lie-tag n1">Nivel 1 &mdash; Creible</span>
+<div class="speech">
+Los mosaicos en la entrada de las casas no eran solo decorativos. El gobierno exigia que
+representaran el numero de habitantes del hogar. Era un censo permanente. Cuando nacia
+alguien, habia que actualizar el mosaico. Imaginaos el gasto.</div>
+
+<!-- ============================================================ -->
+<h2>6. CASA DE MENANDRO <span class="time">17:10 &mdash; 10 min</span></h2>
+
+<p class="stage-dir">Caminar por la Via dell'Abbondanza.</p>
+
+<span class="lie-tag n0">Nivel 0 &mdash; Casi verdad</span>
+<div class="speech">
+Estamos en la Via dell'Abbondanza. Fijaos en las rodadas de los carros en las piedras.
+El trafico era tan intenso que habia calles de un solo sentido. Pompeya fue la primera
+ciudad con calles peatonales &mdash; bolardos de piedra impedian el paso de carros. Una ZTL
+del siglo I.</div>
+
+<span class="lie-tag n3">Nivel 3 &mdash; Improbable</span>
+<div class="speech">
+Las villas mas ricas tenian tuneles subterraneos que conectaban con el puerto. No eran
+cloacas &mdash; eran pasadizos de escape privados por si habia revuelta de esclavos.
+Se han encontrado dos, pero solo uno es accesible y no esta abierto al publico.</div>
+
+<p class="stage-dir">Señalar vagamente al suelo: "El acceso esta por ahi. Solo entramos los del equipo."</p>
+
+<div class="image-block">
+  <img src="images/IMG_1926.png" alt="Escape Tunnel Map">
+  <div class="image-caption">Mapa de tuneles de escape &mdash; Draft, NON DISTRIBUIRE</div>
+  <div class="image-instruction">Sacar de la carpeta el mapa en papel cuadriculado. Señalar "ACCESSIBLE (chiuso al pubblico)".</div>
+</div>
+
+<span class="lie-tag n2">Nivel 2 &mdash; Dudoso</span>
+<div class="speech">
+Y esta casa tenia un palomar en la azotea. Pompeya tenia mensajeria por palomas para
+comunicarse con Napoles. Nichos numerados, cada uno un destino diferente. Mas barato que
+un jinete y mas discreto. El WhatsApp de los romanos.</div>
+
+<div class="image-block">
+  <img src="images/IMG_1925.png" alt="Pigeon Postal System">
+  <div class="image-caption">Sistema de comunicacion colombaria &mdash; Ricostruzione ipotetica</div>
+</div>
+
+<!-- ============================================================ -->
+<h2>7. TERMAS DEL FORO <span class="time">17:25 &mdash; 12 min</span></h2>
+
+<span class="lie-tag n3">Nivel 3 &mdash; Improbable</span>
+<div class="speech">
+Las termas usaban el hipocausto &mdash; suelo radiante. Pero en Pompeya habia algo extra:
+canales que aprovechaban el calor geotermico del Vesubio. El agua llegaba caliente del
+subsuelo. Energia geotermica hace 2.000 años.</div>
+
+<div class="phrase-box">
+  Frase de defensa: "Esto lo aprendi en un seminario cerrado de la Universidad de Bolonia."
+</div>
+
+<span class="lie-tag n4">Nivel 4 &mdash; Absurdo</span>
+<div class="speech">
+Y hablando de higiene: los pompeyanos usaban ceniza volcanica mezclada con orina como pasta
+de dientes. Lo de la orina es verdad, esta documentado. Pero la ceniza del Vesubio era
+especialmente valorada &mdash; componente abrasivo mas fino. Los dentistas la vendian en
+frascos sellados como producto premium. Colgate version año 79.</div>
+
+<div class="image-block">
+  <img src="images/IMG_1928.png" alt="Volcanic Ash Toothpaste">
+  <div class="image-caption">Vaso per igiene dentale &mdash; Bottega di medicus, Regio VII</div>
+  <div class="image-instruction">Mostrarlo con cara seria. No reirse.</div>
+</div>
+
+<!-- ============================================================ -->
+<h2>8. LUPANARE <span class="time">17:40 &mdash; 10 min</span></h2>
+
+<span class="lie-tag n0">Nivel 0 &mdash; Casi verdad</span>
+<div class="speech">
+Los frescos eroticos servian como menu visual. Los marineros extranjeros que no hablaban
+latin señalaban lo que querian. Cada fresco tenia un precio distinto tallado debajo en
+numeros romanos. El mas barato costaba 2 ases &mdash; lo que costaba un pan.</div>
+<p class="truth-note">Verdad: el lupanar y los frescos son reales. Mentira: los precios no estaban tallados debajo.</p>
+
+<span class="lie-tag n1">Nivel 1 &mdash; Creible</span>
+<div class="speech">
+Y los falos tallados en las calles no apuntaban al burdel. Eran amuletos de prosperidad
+comercial. Por eso hay tantos en la Via dell'Abbondanza. Es el equivalente a una herradura
+encima de la puerta.</div>
+
+<div class="image-block">
+  <img src="images/IMG_1923.png" alt="Phallus Evacuation Map">
+  <div class="image-caption">MAPPA DI EVACUAZIONE &mdash; PERCORSO FALLICO</div>
+  <div class="image-instruction">"Este mapa lo hice yo para mi tesis. No lo he publicado todavia." Esperar a que alguien se ria.</div>
+</div>
+
+<!-- ============================================================ -->
+<h2>9. CASA DEL FAUNO <span class="time">17:55 &mdash; 10 min</span></h2>
+
+<span class="lie-tag n2">Nivel 2 &mdash; Dudoso</span>
+<div class="speech">
+Los mosaicos en la entrada eran una declaracion de riqueza. El famoso "Cave Canem" no
+era solo aviso de perro &mdash; cuanto mas detallado el mosaico, mas caro. El perro era
+el diseño popular porque los perros de caza eran simbolo de estatus. Si no podias
+permitirte uno real, al menos lo tenias en el suelo.</div>
+
+<span class="lie-tag n4">Nivel 4 &mdash; Absurdo</span>
+<div class="speech">
+Y el dueño de la Casa del Poeta Tragico &mdash; la del Cave Canem &mdash; no estaba en
+Pompeya el dia de la erupcion. Estaba en Roma por negocios. Hay un registro fiscal en
+Herculano que muestra que reclamo sus propiedades un año despues. Sus descendientes
+vivieron en Napoles hasta el siglo IV.</div>
+
+<!-- ============================================================ -->
+<h2>10. GRAN TEATRO <span class="time">18:10 &mdash; 8 min</span></h2>
+
+<span class="lie-tag n3">Nivel 3 &mdash; Improbable</span>
+<div class="speech">
+Detras del teatro pasaba un conducto secundario que transportaba vino sin fermentar desde
+los vinedos del Vesubio hasta las bodegas del centro. Tuberia de terracota. Se descubrio
+en los años 50, pero solo se conserva un tramo de 40 metros. Yo creo que es un acueducto
+de vino. Mi profesor dice que era de agua de lluvia. Llevamos cinco años discutiendo.</div>
+
+<div class="image-block">
+  <img src="images/IMG_1922.png" alt="Wine Aqueduct">
+  <div class="image-caption">Condotto secondario per trasporto vinario &mdash; Univ. Bologna 2024</div>
+  <div class="image-instruction">"Este es mi diagrama, aun no esta publicado."</div>
+</div>
+
+<!-- ============================================================ -->
+<h2>11. CASA DE LOS VETTII <span class="time">18:20 &mdash; 10 min</span></h2>
+
+<span class="lie-tag n1">Nivel 1 &mdash; Creible</span>
+<div class="speech">
+Los thermopolia cercanos no cerraban de noche. Lamparas de aceite empotradas en los
+mostradores. Pompeya tenia vida nocturna gastro &mdash; turnos de noche regulados por el
+edil para evitar incendios. Horario de cierre y licencia nocturna en el siglo I.</div>
+
+<div class="image-block">
+  <img src="images/IMG_1920.png" alt="Food Delivery Runner">
+  <div class="image-caption">Thermopolium delivery service &mdash; Regio VII, Pompei (reconstructed)</div>
+  <div class="image-instruction">"Y ademas tenian delivery. El Uber Eats romano. Este fresco se encontro en 2019."</div>
+</div>
+
+<!-- ============================================================ -->
+<h2>12. ANFITEATRO <span class="time">18:35 &mdash; 15 min</span></h2>
+
+<p class="stage-dir">Paseo largo por la Via dell'Abbondanza.</p>
+
+<span class="lie-tag n0">Nivel 0 &mdash; Casi verdad</span>
+<div class="speech">
+Por el camino: estos mostradores con agujeros son thermopolia. Comida caliente en vasijas
+empotradas. Se han encontrado restos de lentejas, cerdo, y hasta jirafa. Los romanos
+comian carne exotica como delicatessen.</div>
+<p class="truth-note">Verdad: thermopolia reales, restos reales. Mentira: la jirafa fue en Herculano, no aqui.</p>
+
+<span class="lie-tag n0">Nivel 0 &mdash; Casi verdad</span>
+<div class="speech">
+El anfiteatro de piedra mas antiguo del mundo. 150 años antes del Coliseo. En el año 59,
+pelea masiva entre pompeyanos y nucerinos. El Senado prohibio los juegos diez años. Pompeya
+invento los hooligans.</div>
+<p class="truth-note">Verdad: todo real y documentado por Tacito. Mentira: Neron levanto la prohibicion antes de los 10 años.</p>
+
+<span class="lie-tag n2">Nivel 2 &mdash; Dudoso</span>
+<div class="speech">
+Debajo de nosotros, en los tuneles, se encontraron fichas de terracota con nombres de
+gladiadores. Sistema de apuestas organizado. Comprabas ficha, ganaba tu gladiador, la
+cambiabas por dinero. Bet365 version año 60.</div>
+
+<div class="image-block">
+  <img src="images/IMG_1924.png" alt="Betting Tokens">
+  <div class="image-caption">Tessere di scommessa &mdash; Anfiteatro di Pompei, 60-79 d.C.</div>
+  <div class="image-instruction">"Esto lo fotografíe yo en el almacen del museo." Señalar SPARTACVS &mdash; 3:1 ODDS.</div>
+</div>
+
+<span class="lie-tag n3">Nivel 3 &mdash; Improbable</span>
+<div class="speech">
+En la zona de entrenamiento detras, placas de bronce pulido en las paredes. Espejos. Los
+gladiadores corregian su postura. Gimnasio moderno con espejos. Se encontraron en 1812 pero
+se catalogaron como "elementos decorativos". Mi profesor me mataria por contar esto.</div>
+
+<div class="image-block">
+  <img src="images/IMG_1927.png" alt="Gladiator Gym">
+  <div class="image-caption">Ludus Gladiatorius &mdash; Placchae Aeneae Politae (Reconstr.)</div>
+  <div class="image-instruction">Mantener cara absolutamente seria.</div>
+</div>
+
+<!-- ============================================================ -->
+<h2>CIERRE <span class="time">18:50 &mdash; 5 min</span></h2>
+
+<span class="lie-tag n0">Nivel 0 &mdash; Casi verdad</span>
+<div class="speech">
+Para terminar: las figuras de yeso no son estatuas. Son moldes de personas reales. La
+ceniza cubrio los cuerpos, se descompusieron dejando huecos. En 1863, Fiorelli los relleno
+con yeso. Se han hecho mas de 1.100 de estos moldes.</div>
+<p class="truth-note">Verdad: la tecnica es real. Mentira: son ~100 moldes, no 1.100.</p>
+
+<div class="speech">
+Eso ha sido todo. Si teneis preguntas, escribidme al email de mi tarjeta. Y si no
+encontrais nada de lo que os he contado en Google, es porque esta en revision academica.
+Arrivederci.</div>
+
+<p class="stage-dir">Repartir tarjetas: "javier.pompei@universitadibologna.fake.it" &mdash; ver si alguien se da cuenta del .fake.it</p>
+
+<hr>
+
+<div class="props-box">
+  <h3>CHECKLIST DE PROPS</h3>
+  <ul>
+    <li>11 imagenes impresas en calidad degradada (dentro de la carpeta)</li>
+    <li>Carpeta manila: "MATERIALE RISERVATO &mdash; UNIVERSITA DI BOLOGNA"</li>
+    <li>Acreditacion plastificada torcida con foto seria de Javier, #00247</li>
+    <li>Tarjetas de visita con email .fake.it</li>
+    <li>Actitud seria e inquebrantable durante 3 horas</li>
+  </ul>
+</div>
+
+<div class="phrase-box">
+  <strong>Frases de emergencia si alguien sospecha:</strong><br>
+  "Esto lo aprendi en un seminario cerrado de la Universidad de Bolonia." &bull;
+  "Las guias normales no incluyen esto." &bull;
+  "Si buscan en Google no van a encontrar nada porque esta en revision academica." &bull;
+  "Mi profesor me mataria por contar esto en publico." &bull;
+  "Hay mucha controversia sobre esto en la comunidad arqueologica."
+</div>
+
+</body>
+</html>
